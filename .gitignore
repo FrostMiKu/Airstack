@@ -1,4 +1,5 @@
 .idea
+Airstack.iml
 sqlite.db
 /test
 /stack/*
