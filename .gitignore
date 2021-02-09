@@ -1,7 +1,0 @@
-.idea
-Airstack.iml
-sqlite.db
-/test
-/stack/*
-!.gitkeep
-.DS_Store
