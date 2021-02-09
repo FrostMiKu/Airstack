@@ -1,6 +1,7 @@
 package main
 
 import (
+	"Airstack/middleware"
 	"errors"
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"
@@ -16,7 +17,10 @@ func main() {
 	if err != nil {
 		panic(err.Error())
 	}
+
+	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
+	router.Use(middleware.Cors())
 	router.MaxMultipartMemory = MaxFileSize
 	api := router.Group("/api")
 	{
@@ -28,6 +32,7 @@ func main() {
 		api.GET("/download/:code", download)
 	}
 
+	log.Println("Airstack start!")
 	err = router.Run(Host)
 	if err != nil {
 		panic(err.Error())
@@ -81,4 +86,4 @@ func download(context *gin.Context) {
 // limit api access
 // logger
 // Resource Type
-// catch resource
+// cache resource
