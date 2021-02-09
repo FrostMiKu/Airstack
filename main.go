@@ -71,6 +71,7 @@ func download(context *gin.Context) {
 		return
 	}
 	context.FileAttachment(StoragePath+resource.Hash, resource.ResourceName)
+	db.Delete(&Resource{}, id) // delete resource
 	return
 }
 
@@ -80,3 +81,4 @@ func download(context *gin.Context) {
 // limit api access
 // logger
 // Resource Type
+// catch resource
