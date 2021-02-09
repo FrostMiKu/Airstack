@@ -1,0 +1,8 @@
+.idea
+*.iml
+target
+sqlite.db
+/test
+/stack/*
+!.gitkeep
+.DS_Store
