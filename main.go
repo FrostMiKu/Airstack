@@ -20,7 +20,7 @@ func main() {
 
 	gin.SetMode(gin.ReleaseMode)
 	router := gin.Default()
-	router.Use(middleware.Cors())
+	router.Use(middleware.Cors()) // remove, if you need not.
 	router.MaxMultipartMemory = MaxFileSize
 	api := router.Group("/api")
 	{

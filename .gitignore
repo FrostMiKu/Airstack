@@ -3,6 +3,7 @@
 target
 sqlite.db
 /test
+/build
 /stack/*
 !.gitkeep
 .DS_Store
