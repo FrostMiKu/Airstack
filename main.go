@@ -80,10 +80,4 @@ func download(context *gin.Context) {
 	return
 }
 
-// ToDo
-// frontend pages
-// config
-// limit api access
-// logger
-// Resource Type
-// cache resource
+
